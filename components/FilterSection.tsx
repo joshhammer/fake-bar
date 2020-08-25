@@ -34,7 +34,7 @@ function showHideFilters() {
             alt=""
           />
         </div>
-        <div className={`${styles.filterBox} ${invisible ? "invisible" : ""}`}>
+        <div className={`filterBox ${invisible ? "invisible" : ""}`}>
           <ul className={styles.filterList}>
             <li>all</li>
             <li>beer</li>

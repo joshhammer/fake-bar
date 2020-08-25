@@ -41,10 +41,13 @@ $main-font: "Quicksand", sans-serif;
 }
 
 .filterBox {
+    height: 58px;
+    transition: height .5s;
+    overflow: hidden;
 }
 
-.invisible {
-    display: none;
+.filterBox.invisible {
+    height: 0;
 }
 
 .filterArrow {
