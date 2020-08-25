@@ -1,0 +1,24 @@
+:root {
+  --main-blue: #0C1D35;
+  --main-font: "Quicksand", sans-serif;
+  --main-white: white;
+  --main-green: #26FF00;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, p, button {
+  margin: 0;
+  font-family: var(--main-font);
+}
+
+

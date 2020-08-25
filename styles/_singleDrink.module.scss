@@ -1,0 +1,45 @@
+.drinkWrapper {
+    display: flex;
+    flex-direction: column;
+    color: var(--main-white);
+    &__top {
+        display: flex;
+        &__right {
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    &__buttonBox {
+        button {
+            display: block;
+            width: 80px;
+            padding: 5px 10px;
+            margin-bottom: .5rem;
+            border: 1px solid var(--main-green);
+            border-radius: 15px;
+            background-color: var(--main-blue);
+            color: var(--main-green);
+            font-family: var(--main-font);
+            &:hover {
+                background-color: var(--main-green);
+                color: var(--main-blue);
+            }
+        }
+    }
+    &__bottom {
+
+    }
+
+}
+
+
+.drinkImage {
+    width: 100%;
+    margin-right: 1rem;
+}

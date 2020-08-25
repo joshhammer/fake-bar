@@ -1,0 +1,7 @@
+.drinkSection {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 330px 330px;
+        grid-gap: 50px;
+    }
+}

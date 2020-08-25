@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Caipirinha",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink01.png"
+    },
+    {
+        "name": "Cosmopolitan",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink02.png"
+    },
+    {
+        "name": "Caipirinha",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink01.png"
+    },
+    {
+        "name": "Cosmopolitan",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink02.png"
+    },
+    {
+        "name": "Caipirinha",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink01.png"
+    },
+    {
+        "name": "Cosmopolitan",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink02.png"
+    },
+    {
+        "name": "Caipirinha",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink01.png"
+    },
+    {
+        "name": "Cosmopolitan",
+        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink02.png"
+    }
+]
