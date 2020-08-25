@@ -1,7 +1,11 @@
 import styles from '../styles/_singleDrink.module.scss'
+import { useState } from 'react'
 
 
 export default function SingleDrink(props) {
+  const [drinkCount, setDrinkCount] = useState(0)
+
+
     return (
       <div className={styles.drinkWrapper}>
         <div className={styles.drinkWrapper__top}>
@@ -18,7 +22,11 @@ export default function SingleDrink(props) {
               <p>CHF {props.drink.price}.-</p>
             </div>
             <div className={styles.drinkWrapper__buttonBox}>
-              <button>- 2 +</button>
+              <button className={styles.countBtn}>
+                <span onClick={() => setDrinkCount(drinkCount > 0 ? drinkCount - 1 : 0)}>-</span>
+                {drinkCount}
+                <span onClick={() => setDrinkCount(drinkCount + 1)}>+</span>
+              </button>
               <button>ADD</button>
             </div>
           </div>
@@ -28,7 +36,13 @@ export default function SingleDrink(props) {
           <p>
             <strong>{props.drink.name}</strong>
           </p>
-          <p>{props.drink.ingredients.map((ingredient) => ingredient)}</p>
+          <p>
+            {props.drink.ingredients.map((ingredient, index) =>
+              index != props.drink.ingredients.length - 1
+                ? `${ingredient}, `
+                : `${ingredient}`
+            )}
+          </p>
         </div>
       </div>
     );
