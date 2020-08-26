@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import styles from '../styles/_filterSection.module.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const FilterButton = styled.button`
     color: var(--main-white);
@@ -15,30 +15,47 @@ const FilterButton = styled.button`
     }
 `
 
-export default function FilterSection() {
+export default function FilterSection(props) {
 const [invisible, setInvisible] = useState(true)
 const [filterIsActive, setFilterIsActive] = useState(false)
+const [filterValue, setFilterValue] = useState("")
 
 function showHideFilters() {
     setInvisible(!invisible)
     setFilterIsActive(!filterIsActive)
 }
 
+function passFilterValue() {
+    console.log("childFilterValue", filterValue)
+    props.getFilter(filterValue)
+}
+
+useEffect(() => {
+    passFilterValue()
+}, [filterValue])
+
     return (
       <div className={styles.filterSection}>
-        <FilterButton onClick={showHideFilters} className={`filterBtn ${filterIsActive ? "isActive" : ""}`}>Filter</FilterButton>
+        <FilterButton
+          onClick={showHideFilters}
+          className={`filterBtn ${filterIsActive ? "isActive" : ""}`}
+        >
+          Filter
+        </FilterButton>
         <div>
           <img
-            className={`${styles.filterArrow} ${filterIsActive ? "activeArrow" : ""}`}
+            className={`${styles.filterArrow} ${
+              filterIsActive ? "activeArrow" : ""
+            }`}
             src="/arrowDown.svg"
             alt=""
           />
         </div>
         <div className={`filterBox ${invisible ? "invisible" : ""}`}>
           <ul className={styles.filterList}>
-            <li>all</li>
-            <li>beer</li>
-            <li>wine</li>
+            <li onClick={() => {setFilterValue('all')}}>all</li>
+            <li onClick={() => {setFilterValue('beer')}}>beer</li>
+            <li onClick={() => {setFilterValue('wine')}}>wine</li>
             <li>others</li>
             <li>shots</li>
             <li>cocktails</li>

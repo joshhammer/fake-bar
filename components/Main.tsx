@@ -2,6 +2,7 @@ import styles from '../styles/_main.module.scss'
 import styled from 'styled-components'
 import FilterSection from './FilterSection'
 import DrinkSection from './DrinkSection'
+import { useState, useEffect } from 'react'
 
 const PageTitle = styled.h1`
     color: white;
@@ -25,14 +26,30 @@ const MainDescription = styled.p`
 `
 
 export default function Main() {
-    return(
-        <main className={styles.mainContainer}>
-            <PageTitle>Bla Bla Bar</PageTitle>
-            <MainDescription>In der Bar und Smokers’ Lounge kann man sich hervorragend den Genüssen des Lebens hingeben. 
-                Mit je 50 Plätzen gibt es ausreichend Platz, sich frei zu entfalten. Bezüglich Cocktail- und Zigarrensortiment bleiben keine Wünsche offen. 
-                In der Smokers’ Lounge kann man sich gediegen zurückziehen und ungestört dem Genuss des Rauchens frönen.</MainDescription>
-            <FilterSection />
-            <DrinkSection />
-        </main>
-    )
+    
+    const [parentFilterValue, setParentFilterValue] = useState('')
+
+    function getFilterValue(childFilterValue: string) {
+        console.log('call getFilterValue')
+        setParentFilterValue(childFilterValue)
+    }
+
+    useEffect(() => {
+        console.log("Main is updated")
+    }, [parentFilterValue])
+
+    return (
+      <main className={styles.mainContainer}>
+        <PageTitle>Bla Bla Bar</PageTitle>
+        <MainDescription>
+          In der Bar und Smokers’ Lounge kann man sich hervorragend den Genüssen
+          des Lebens hingeben. Mit je 50 Plätzen gibt es ausreichend Platz, sich
+          frei zu entfalten. Bezüglich Cocktail- und Zigarrensortiment bleiben
+          keine Wünsche offen. In der Smokers’ Lounge kann man sich gediegen
+          zurückziehen und ungestört dem Genuss des Rauchens frönen.
+        </MainDescription>
+        <FilterSection getFilter={getFilterValue} />
+        <DrinkSection filterValue={parentFilterValue}/>
+      </main>
+    );
 }

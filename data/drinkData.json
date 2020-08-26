@@ -4,55 +4,63 @@
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink01.png"
+        "imageUrl": "drink01.png",
+        "category": "cocktail"
     },
     {
         "name": "Cosmopolitan",
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink02.png"
+        "imageUrl": "drink02.png",
+        "category": "longdrink"
+    },
+    {
+        "name": "Wein",
+        "ingredients": ["Traubensaft"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink01.png",
+        "category": "wine"
+    },
+    {
+        "name": "Bier",
+        "ingredients": ["Hopfen", "Malz", "Wasser"],
+        "amount": 0.3,
+        "price": 14,
+        "imageUrl": "drink02.png",
+        "category": "beer"
     },
     {
         "name": "Caipirinha",
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink01.png"
+        "imageUrl": "drink01.png",
+        "category": "cocktail"
     },
     {
         "name": "Cosmopolitan",
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink02.png"
+        "imageUrl": "drink02.png",
+        "category": "longdrink"
     },
     {
         "name": "Caipirinha",
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink01.png"
+        "imageUrl": "drink01.png",
+        "category": "cocktail"
     },
     {
         "name": "Cosmopolitan",
         "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
         "amount": 0.3,
         "price": 14,
-        "imageUrl": "drink02.png"
-    },
-    {
-        "name": "Caipirinha",
-        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
-        "amount": 0.3,
-        "price": 14,
-        "imageUrl": "drink01.png"
-    },
-    {
-        "name": "Cosmopolitan",
-        "ingredients": ["Cachaca", "Limetten", "Rohrzucker"],
-        "amount": 0.3,
-        "price": 14,
-        "imageUrl": "drink02.png"
+        "imageUrl": "drink02.png",
+        "category": "longdrink"
     }
 ]
