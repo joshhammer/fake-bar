@@ -9,27 +9,25 @@ export default function DrinkSection(props) {
     const [filtered, setFiltered] = useState([])
     
     useEffect(() => {
-
         setFiltered(drinkData.filter((drink, index) => {
           return drink.category === filterValue ? (
             <SingleDrink drink={drink} key={index} />
           ) : null;
         }));
-
-        console.log("Drinks are updated", filterValue)
-        console.log("useEffect filtered Array", filtered)
-
     },[filterValue])
 
-    return(
-        <div className={styles.drinkSection__wrapper}>
-            {/* {drinkData.map((drink, index) => {
-                return <SingleDrink drink={drink} key={index}/>
-            })} */}
-            {console.log('RENDER')}
-            {filtered.map((drink, index) => {
-                return <SingleDrink drink={drink} key={index} />
-            })}
-        </div>
-    )
+    return (
+      <div className={styles.drinkSection__wrapper}>
+        {console.log("filtered", filtered)}
+        {
+        filterValue === "all" ? drinkData.map((drink, index) => <SingleDrink drink={drink} key={index} />)
+        : 
+        !filtered.length ? <p>Sorry, no results found...</p>
+        :
+        filterValue !== "all" ? filtered.map((drink, index) => <SingleDrink drink={drink} key={index} />)
+        :
+        null
+        }
+      </div>
+    );
 }

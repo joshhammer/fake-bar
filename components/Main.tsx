@@ -30,13 +30,8 @@ export default function Main() {
     const [parentFilterValue, setParentFilterValue] = useState('')
 
     function getFilterValue(childFilterValue: string) {
-        console.log('call getFilterValue')
         setParentFilterValue(childFilterValue)
     }
-
-    useEffect(() => {
-        console.log("Main is updated")
-    }, [parentFilterValue])
 
     return (
       <main className={styles.mainContainer}>

@@ -18,7 +18,7 @@ const FilterButton = styled.button`
 export default function FilterSection(props) {
 const [invisible, setInvisible] = useState(true)
 const [filterIsActive, setFilterIsActive] = useState(false)
-const [filterValue, setFilterValue] = useState("")
+const [filterValue, setFilterValue] = useState("all")
 
 function showHideFilters() {
     setInvisible(!invisible)
@@ -26,7 +26,6 @@ function showHideFilters() {
 }
 
 function passFilterValue() {
-    console.log("childFilterValue", filterValue)
     props.getFilter(filterValue)
 }
 
@@ -36,31 +35,22 @@ useEffect(() => {
 
     return (
       <div className={styles.filterSection}>
-        <FilterButton
-          onClick={showHideFilters}
-          className={`filterBtn ${filterIsActive ? "isActive" : ""}`}
-        >
-          Filter
-        </FilterButton>
+        <FilterButton onClick={showHideFilters} className={`filterBtn ${filterIsActive ? "isActive" : ""}`}>Filter</FilterButton>
         <div>
           <img
-            className={`${styles.filterArrow} ${
-              filterIsActive ? "activeArrow" : ""
-            }`}
-            src="/arrowDown.svg"
-            alt=""
-          />
+            className={`${styles.filterArrow} ${filterIsActive ? "activeArrow" : ""}`} src="/arrowDown.svg" alt=""/>
         </div>
         <div className={`filterBox ${invisible ? "invisible" : ""}`}>
           <ul className={styles.filterList}>
             <li onClick={() => {setFilterValue('all')}}>all</li>
             <li onClick={() => {setFilterValue('beer')}}>beer</li>
             <li onClick={() => {setFilterValue('wine')}}>wine</li>
-            <li>others</li>
-            <li>shots</li>
-            <li>cocktails</li>
-            <li>longdrinks</li>
-            <li>softdrinks</li>
+            <li onClick={() => {setFilterValue('others')}}>others</li>
+            <li onClick={() => {setFilterValue('shots')}}>shots</li>
+            <li onClick={() => {setFilterValue('cocktails')}}>cocktails</li>
+            <li onClick={() => {setFilterValue('longdrinks')}}>longdrinks</li>
+            <li onClick={() => {setFilterValue('softdrinks')}}>softdrinks</li>
+            
           </ul>
         </div>
       </div>

@@ -5,7 +5,7 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink01.png",
-        "category": "cocktail"
+        "category": "cocktails"
     },
     {
         "name": "Cosmopolitan",
@@ -13,7 +13,7 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink02.png",
-        "category": "longdrink"
+        "category": "longdrinks"
     },
     {
         "name": "Wein",
@@ -37,7 +37,7 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink01.png",
-        "category": "cocktail"
+        "category": "cocktails"
     },
     {
         "name": "Cosmopolitan",
@@ -45,7 +45,7 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink02.png",
-        "category": "longdrink"
+        "category": "longdrinks"
     },
     {
         "name": "Caipirinha",
@@ -53,7 +53,7 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink01.png",
-        "category": "cocktail"
+        "category": "cocktails"
     },
     {
         "name": "Cosmopolitan",
@@ -61,6 +61,6 @@
         "amount": 0.3,
         "price": 14,
         "imageUrl": "drink02.png",
-        "category": "longdrink"
+        "category": "longdrinks"
     }
 ]

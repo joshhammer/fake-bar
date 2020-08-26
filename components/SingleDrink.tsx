@@ -27,7 +27,7 @@ export default function SingleDrink(props) {
                 {drinkCount}
                 <span onClick={() => setDrinkCount(drinkCount + 1)}>+</span>
               </button>
-              <button>ADD</button>
+              <button onClick={() => {setDrinkCount(0); alert(`${drinkCount} ${props.drink.name} added to basket.`)}}>ADD</button>
             </div>
           </div>
         </div>
