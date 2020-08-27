@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import styles from '../styles/_filterSection.module.scss'
 import { useState, useEffect } from 'react'
+import SingleFilter from '../components/SingleFilter'
+import categories from '../data/categories.json'
 
 const FilterButton = styled.button`
     color: var(--main-white);
@@ -19,6 +21,7 @@ export default function FilterSection(props) {
 const [invisible, setInvisible] = useState(true)
 const [filterIsActive, setFilterIsActive] = useState(false)
 const [filterValue, setFilterValue] = useState("all")
+const [active, setActive] = useState(0)
 
 function showHideFilters() {
     setInvisible(!invisible)
@@ -27,6 +30,10 @@ function showHideFilters() {
 
 function passFilterValue() {
     props.getFilter(filterValue)
+}
+
+function receiveFilterValue(childValue: string) {
+    setFilterValue(childValue)
 }
 
 useEffect(() => {
@@ -42,15 +49,7 @@ useEffect(() => {
         </div>
         <div className={`filterBox ${invisible ? "invisible" : ""}`}>
           <ul className={styles.filterList}>
-            <li onClick={() => {setFilterValue('all')}}>all</li>
-            <li onClick={() => {setFilterValue('beer')}}>beer</li>
-            <li onClick={() => {setFilterValue('wine')}}>wine</li>
-            <li onClick={() => {setFilterValue('others')}}>others</li>
-            <li onClick={() => {setFilterValue('shots')}}>shots</li>
-            <li onClick={() => {setFilterValue('cocktails')}}>cocktails</li>
-            <li onClick={() => {setFilterValue('longdrinks')}}>longdrinks</li>
-            <li onClick={() => {setFilterValue('softdrinks')}}>softdrinks</li>
-            
+            {categories.map((category, index) => <SingleFilter category={category} key={index} index={index} getValue={receiveFilterValue} active={active} setActive={setActive}></SingleFilter>)}
           </ul>
         </div>
       </div>

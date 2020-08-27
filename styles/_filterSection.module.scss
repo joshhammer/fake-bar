@@ -60,3 +60,8 @@ $main-font: "Quicksand", sans-serif;
     transform: rotate(180deg);
 }
 
+li.isActive {
+    background-color: var(--main-white);
+    color: var(--main-blue);
+}
+
